@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 3</title>
+    <style>
+        div{
+            margin: 1rem;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- <img src="https://images.pexels.com/photos/14141546/pexels-photo-14141546.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Cheesecake picture" width="   200">
+    <h2>Hy there!</h2>
+    <img src="assets/galaxy.jpg" alt="kuch bhi" height="300" > -->
+    <hr />
+    <form>
+        <input type="hidden" name="username" value="Shahzad">
+      <div>
+        <label for="name">Enter your Full Name</label>
+        <input type="text" id="name" required  placeholder="Shahzad"/>
+      </div>
+      <div>
+        <textarea rows="10" cols="20"></textarea>
+      </div>
+      <div>
+        <label for="email">Enter your Email</label>
+        <input type="email" id="email" required value="shahzad@mail.com" readonly />
+      </div>
+      <div>
+        <label for="phone">Enter your phone number</label>
+        <input type="number" id="phone" />
+      </div>
+      <div>
+        <label for="pass">Enter your Password</label>
+        <input type="password" id="pass" />
+      </div>
+      <div>
+        <label for="dob">Enter your Date of birth</label>
+        <!-- <input type="date" id="dob"> -->
+        <input type="datetime-local" id="dob" />
+      </div>
+      <div>
+        <label for="dob">Enter your favourite Color</label>
+        <!-- <input type="date" id="dob"> -->
+        <input type="color" id="dob" />
+      </div>
+      <div>
+        <label for="range">Enter your spending range</label>
+        <!-- <input type="date" id="dob"> -->
+        <input type="range" id="range" />
+      </div>
+      
+      <select>
+        <option value="" selected>Select your favourite Actor</option>
+        <option value="">Shahrukh khan</option>
+        <option value="">Kevin Hart</option>
+        <option value="">Zaheer Iqbal</option>
+        <option value="">Muneeb Butt</option>
+        <option value="">Sadia Ifran</option>
+        <option value="">Feroz Khan</option>
+      </select>
+      <div>
+        <label for="file">Profile Picture</label>
+        <!-- <input type="date" id="dob"> -->
+        <input type="file" id="file" />
+      </div>
+      <div>
+          <input type="checkbox" id="checkbox" />
+        <label for="checkbox">Agree to our terms and conditions</label>
+        <!-- <input type="date" id="dob"> -->
+      </div>
+      <div>
+          <label for="male">Male</label>
+          <input type="radio" name="gender" id="male"/>
+          <label for="Female">Female</label>
+          <input type="radio" name="gender" id="Female"/>
+          <label for="dontsay">Nai Btana</label>
+          <input type="radio" name="gender" id="dontsay"/>
+    </div>
+      <input type="submit">
+      <input type="reset" value="Reset Form">
+    </form>
+  </body>
+</html>
