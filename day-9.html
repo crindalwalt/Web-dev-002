@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 9</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Ubuntu", sans-serif;
+
+        }
+
+        .gradient-container {
+            width: 50%;
+            height: 300px;
+            margin: 3rem;
+            /* border: 3px solid red; */
+            background: rgb(24, 204, 25);
+            background: linear-gradient(90deg, rgba(24, 204, 25, 1) 0%, rgba(61, 180, 153, 1) 51%, rgba(209, 223, 226, 1) 100%);
+            margin-bottom: 1rem;
+
+            text-align: center;
+            padding: 2rem;
+            font-size: x-large;
+            /* text-decoration: underline; */
+            border-radius: 1rem;
+            transition: all .3s ease;
+        }
+        .gradient-container:hover{
+            box-shadow: 12px 12px 24px 3px gray;
+            transform: scale(1.05);
+
+        }
+
+        .gradient-container h1 {
+            margin-top: 6rem;
+        }
+
+        .box {
+            width: 400px;
+            height: 300px;
+            background-color: maroon;
+            margin: auto;
+
+
+            background-image: url("assets/sunshine.jpg");
+            background-size: cover;
+            text-align: center;
+            padding-top: .5rem;
+
+        }
+        .icon{
+            color: beige;
+            padding: 1rem;
+            margin: 1rem;
+            border-radius: .5rem;
+            cursor: pointer;
+
+        }
+        .icon:hover{
+            background-color: #efefef;
+            color: #333333;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- <h1>Welcome to Day 9 of Css</h1> -->
+    <!-- <hr> -->
+
+    <div class="gradient-container">
+        <h1>Welcome To UFC</h1>
+        
+            <div class="icon">
+                <a href="https://webiface.com">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-browser-chrome" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M16 8a8 8 0 0 1-7.022 7.94l1.902-7.098a3 3 0 0 0 .05-1.492A3 3 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8M0 8a8 8 0 0 0 7.927 8l1.426-5.321a3 3 0 0 1-.723.255 3 3 0 0 1-1.743-.147 3 3 0 0 1-1.043-.7L.633 4.876A8 8 0 0 0 0 8m5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a3 3 0 0 0-1.252.243 2.99 2.99 0 0 0-1.81 2.59M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
+                      </svg>
+                </a>
+            </div>
+        
+
+    </div>
+    <!-- <div class="box">
+        <h1>Welcome To UFC</h1>
+    </div> -->
+</body>
+
+</html>
