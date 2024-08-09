@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #001219;
+    background-color: var(--dark-color);
     color: aliceblue;
     padding: 1rem 1.5rem;
     position: sticky;
@@ -33,7 +33,7 @@
     color: aliceblue;
 }
 .callToActions button {
-    background-color: #0a9396;
+    background-color: var(--primary-color);
     border-radius: .5rem;
     border: none;
     padding: .8rem 1.2rem;
@@ -85,7 +85,7 @@
     align-items: center;
 
     border: none;
-    background-color: #0a9396;
+    background-color: var(--primary-color);
     border-radius: .5rem;
     color: aliceblue;
     font-size: medium;
@@ -95,5 +95,63 @@
     font-size: xx-large;
 }
 .hero-txt{
-    color: #0a9396;
+    color: var(--primary-color);
 }
+
+
+
+/* ===================Category section================== */
+
+#category-section{
+    padding: 1rem 2rem;
+    margin: 2rem 0rem;
+}
+.section-title{
+    border-left: 6px solid var(--primary-color);
+    padding-left: .7rem;
+    height: 40px;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.inner-category-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0rem;
+    
+}
+.category-bubble{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-circle{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all .3s ease;
+    cursor: pointer;
+}
+.category-circle:hover{
+    transform: scale(1.2);
+    color: var(--primary-color);
+}
+
+.category-content h3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0rem;
+
+}
+
