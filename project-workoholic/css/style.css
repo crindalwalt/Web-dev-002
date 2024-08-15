@@ -253,3 +253,70 @@
 .gig-price .price{
     color: var(--primary-color);
 }
+/* ==================Footer section=================== */
+footer{
+  background-color: #333333;
+  position: relative;
+}
+.footer-content{
+
+  color: whitesmoke;
+  padding: 1.5rem 1.2rem;
+  
+}
+.floating-footer{
+  width: 80%;
+  background-color: darkblue;
+  color: white;
+  /* margin: 1rem; */
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 3px 3px 12px  black ;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: absolute;
+  top: -60px;
+  left: 100px;
+  transition: all .1s ease-in;
+}
+.floating-footer:hover{
+  box-shadow: 6px 6px 12px  black ;
+}
+
+.ff-right input{
+  padding: .7rem 1.2rem;
+  border: none;
+  outline: none;
+  border-radius: .5rem;
+
+}
+.ff-right .submit-input{
+  background-color: brown;
+  color: white;
+}
+.footer-heading{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+}
+.footer-social{
+  display: flex;
+  align-items: center;
+}
+.social-icon{
+  --box-side : 45px;
+  width: var(--box-side);
+  height: var(--box-side);
+  background-color: chartreuse;
+  margin: .5rem;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
