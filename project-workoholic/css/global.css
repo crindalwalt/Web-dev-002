@@ -12,6 +12,10 @@
     --dark-color:#001219 ;
     --background-color:#e9fbfc;
     --text-color: #333333;
+
+
+    --card-width: 300px;
+    --card-height: 400px;
 }
 body{
     background-color: var(--background-color);
