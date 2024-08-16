@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Grid</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            display: grid;
+            /* grid-template-columns: 300px 300px 200px ; */
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: auto;
+        }
+        .box{
+            padding: 1rem 2rem;
+            margin: .5rem;
+            background-color: darkolivegreen;
+        }
+        #box-1{
+            background-color: violet;
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+        #box-2{
+            background-color: chocolate;
+            grid-row-start: 2;
+            grid-row-end: 5;
+        }
+        #box-3{
+            background-color: aquamarine;
+            grid-column-start: 2;
+            grid-column-end: 5;
+        }
+
+        #box-4{
+            background-color: red;
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 3;
+            grid-row-end: 6;
+        }
+        #box-5{
+            background-color: yellow;
+            grid-row-start: 3;
+            grid-row-end: 5;
+
+
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+    <div class="box" id="box-1">BOX 1</div>
+    <div class="box" id="box-2">BOX 2</div>
+    <div class="box" id="box-3">BOX 3</div>
+    <div class="box" id="box-4">BOX 4</div>
+    <div class="box" id="box-5">BOX 5</div>
+    <div class="box" id="box-6">BOX 6</div>
+    <div class="box" id="box-7">BOX 7</div>
+    <div class="box" id="box-8">BOX 8</div>
+    <div class="box" id="box-9">BOX 9</div>
+    <div class="box" id="box-10">BOX 10</div>
+    <div class="box" id="box-11">BOX 11</div>
+    <div class="box" id="box-12">BOX 12</div>
+   </div>
+</body>
+</html>
