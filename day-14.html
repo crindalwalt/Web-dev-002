@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation in Css</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            background-color: darkorange;
+            display: flex;
+            justify-content: start;
+                align-items: start;
+
+                
+
+
+                animation-name: awaragardi;
+                animation-duration: 3s;
+                /* animation-fill-mode: ; */
+                animation-iteration-count: infinite;
+                transition: all .3s ease ;
+
+        }
+        .box{
+            background-color: red;
+            width: 200px;
+            height: 200px;
+            border-radius: 1rem;
+            box-shadow: 5px 5px 12px  rgba(0, 0, 0, 0.479);
+            /* transition: all .4s ease; */
+            cursor: pointer;
+
+            animation-name: loading;
+            animation-duration: 2s;
+            /* animation-delay: 5s; */
+            animation-timing-function: ease;
+            animation-fill-mode: forwards ;
+            animation-iteration-count: infinite;
+
+        }
+        /* .box:hover{
+            background-color: rgb(20, 55, 255);
+            transform: rotate(45deg);
+        } */
+
+
+
+
+        @keyframes loading {
+            /**
+            To and from method
+            */
+
+            /* from{
+                transform: rotate(0deg);
+            }   
+            to{
+                transform: rotate(120deg);
+            } */
+
+            /* percentage method */
+
+            0%{
+                transform: rotate(0deg);
+                background-color: red;
+                border-radius: 0%;
+            }
+            25%{
+                transform: rotate(45%deg);
+                background-color: green;
+                border-radius: 25%;
+            }
+            50%{
+                transform: rotate(90deg);
+                background-color: yellow;
+                border-radius: 50%;
+            }
+            75%{
+                transform: rotate(135%deg);
+                background-color: orchid;
+                border-radius: 25%;
+            }
+            100%{
+                transform: rotate(180deg);
+                background-color: black;
+                border-radius: 0%;
+            }
+            
+        }
+        @keyframes awaragardi {
+            0%{
+                justify-content: start;
+                align-items: start;
+            }
+            25%{
+                justify-content: center;
+                align-items: center;
+            }
+            50%{
+                justify-content: end;
+                align-items: start;
+            }
+            75%{
+                justify-content: center;
+                align-items: center;
+            }
+            100%{
+                justify-content: start;
+                align-items: start;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
