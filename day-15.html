@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+
+        }
+        .cover{
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(90, 60, 90);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .content h1{
+            margin: 1rem;
+        }
+        .circle{
+            width: 85px;
+            height: 85px;
+            background-color: darkslategrey;
+            color: white;
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @media only screen and (min-width: 787px)   {
+            #box-2,#box-3{
+                /* show nai krana */
+                display: none;
+
+            }
+            .cover{
+                background-color: lightcoral;
+            }
+        }
+        @media only screen and (min-width: 401px) and (max-width: 786px) {
+            #box-1,#box-3{
+                display: none;
+            }
+            .cover{
+                background-color: aqua;
+            }
+        }
+        @media only screen and  (max-width: 400px){
+            #box-1,#box-2{
+                display: none;
+            }
+            .cover{
+                background-color: rgb(55, 223, 14);
+            }
+        }
+        /* 
+            Mobile screen 0px - 400px
+            tablet screen 401px - 786px ✅
+            laptop screen 787px - 1440px ✅
+        */
+    </style>
+</head>
+<body>
+    <div class="cover">
+        <div class="box" id="box-1">
+            <div class="content">
+                <div class="circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-laptop" viewBox="0 0 16 16">
+                        <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"/>
+                      </svg>
+                </div>
+                <h1>Laptop screen</h1>
+            </div>
+        </div>
+        <div class="box" id="box-2">
+            <div class="content">
+                <div class="circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-tablet-landscape-fill" viewBox="0 0 16 16">
+                        <path d="M2 14a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2zm11-7a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
+                      </svg>
+                </div>
+                <h1>Tablet screen</h1>
+            </div>
+        </div>
+        <div class="box" id="box-3">
+            <div class="content">
+                <div class="circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
+                        <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                        <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                      </svg>
+                </div>
+                <h1>Mobile screen</h1>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>
