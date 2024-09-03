@@ -1,23 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>X-commerce</title>
-    <link rel="stylesheet" href="bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="css/general.css">
-</head>
-<body>
-    
-
-
-
-
-
-
-
+    <link rel="stylesheet" href="bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar-main">
+      <div class="nav_element branding">
+        <div class="logo-holder">
+          <img
+            src="assets/images/logo.png"
+            alt="logo not showing"
+            class="web-logo"
+          />
+        </div>
+        <div class="brand-name d-flex align-items-center">
+          <h2 class="m-0">X-commerce</h2>
+        </div>
+      </div>
+      <div class="nav_element searchbox">
+        <input type="text" placeholder="Search here ..." />
+      </div>
+      <div class="nav_element user-profile">
+        <button class="btn cta-primary btn-lg ms-2 px-4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="currentColor"
+            class="bi bi-file-word-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M5.485 4.879l1.036 4.144.997-3.655a.5.5 0 0 1 .964 0l.997 3.655 1.036-4.144a.5.5 0 0 1 .97.242l-1.5 6a.5.5 0 0 1-.967.01L8 7.402l-1.018 3.73a.5.5 0 0 1-.967-.01l-1.5-6a.5.5 0 1 1 .97-.242z"
+            />
+          </svg>
+          <span class="ms-2">Contact</span>
+        </button>
+        <div class=" ms-3 user-avatar">
+          <img src="assets/images/avatar.png" alt="avatar not loading" />
+          <div class="caret-icon ms-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              class="bi bi-caret-down-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+              />
+            </svg>
+          </div>
+        </div>
+        
+      </div>
+    </nav>
 
     <script src="bootstrap/bootstrap.bundle.js"></script>
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>

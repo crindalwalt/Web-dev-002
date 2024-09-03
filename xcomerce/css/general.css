@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
+:root{
+    --light-color: #cad2c5;
+    --dark-color: #2f3e46;
+    --primary-color: #52796f;
+    --secondary-color: #84a98c;
+    --less-dark-color: #354f52;
+
+}
+*{
+    font-family: "playfair";
+}
+body{
+    background-color: var(--light-color) !important;
+}
+
+.cta-primary{
+    background-color: var(--secondary-color);
+}
+.cta-primary:hover{
+    background-color: black;
+    color: white;
+}
