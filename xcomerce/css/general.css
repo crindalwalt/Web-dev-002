@@ -1,10 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
 
 :root{
-    --light-color: #cad2c5;
+    /* --light-color: #cad2c5;
     --dark-color: #2f3e46;
     --primary-color: #52796f;
+    --primary-color: #38524b;
     --secondary-color: #84a98c;
+    --less-dark-color: #354f52; */
+
+    --light-color: #faf3dd;
+    --dark-color: #2f3e46;
+    --primary-color: #393d3f;
+    --secondary-color: #adc178;
     --less-dark-color: #354f52;
 
 }

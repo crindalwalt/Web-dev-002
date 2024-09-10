@@ -1,59 +1,103 @@
-
-.navbar-main{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--primary-color);
-    color: var(--light-color);
-    padding: 1rem;
+.navbar-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  padding: 1rem;
 }
 .logo-holder {
-    width: 60px;
-    height: 50px;
+  width: 60px;
+  height: 50px;
 }
-.logo-holder img{
-    width: inherit;
-    height: inherit;
+.logo-holder img {
+  width: inherit;
+  height: inherit;
 }
 
-.branding{
+.branding {
+  display: flex;
+  align-items: center;
+}
+
+.searchbox input {
+  outline: none;
+  padding: 0.8rem 1rem;
+  min-width: 400px;
+  border-radius: 2rem;
+  background-color: rgb(221, 225, 226);
+  transition: all 0.3s ease;
+}
+.searchbox input:hover {
+  transform: scale(1.05);
+  /* transform: rotate(180deg); */
+}
+.user-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user-avatar {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  transition: all 0.2s ease;
+}
+.user-avatar:hover {
+  background-color: rgba(250, 235, 215, 0.164);
+  color: black;
+  cursor: pointer;
+}
+.user-avatar img {
+  width: 50px;
+  height: 50px;
+}
+/* !========================HERO section ============================== */
+#hero-section {
+  background-repeat: no-repeat;
+  background-size: cover;
+background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1157%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(245%2c 235%2c 224%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c565.079C103.941%2c561.494%2c156.307%2c433.395%2c251.271%2c390.986C372.069%2c337.04%2c547.076%2c392.174%2c625.597%2c285.7C700.945%2c183.529%2c643.99%2c33.572%2c603.616%2c-86.787C567.794%2c-193.576%2c476.706%2c-264.569%2c410.455%2c-355.662C336.58%2c-457.238%2c312.446%2c-618.288%2c191.761%2c-653.077C70.981%2c-687.894%2c-36.196%2c-566.589%2c-152.043%2c-517.81C-252.74%2c-475.411%2c-362.228%2c-457.054%2c-444.509%2c-385.17C-534.733%2c-306.346%2c-630.301%2c-211.398%2c-639.499%2c-91.946C-648.623%2c26.546%2c-562.918%2c129.485%2c-491.449%2c224.437C-431.344%2c304.292%2c-344.806%2c351.773%2c-262.662%2c408.71C-177.186%2c467.956%2c-103.939%2c568.664%2c0%2c565.079' fill='%23efe0ce'%3e%3c/path%3e%3cpath d='M1440 1052.958C1536.498 1051.079 1630.423 1033.792 1716.753 990.636 1810.58 943.733 1900.699 884.8910000000001 1955.335 795.346 2013.6860000000001 699.7139999999999 2059.7709999999997 583.345 2031.391 474.971 2003.527 368.567 1873.0430000000001 329.56 1809.7930000000001 239.57299999999998 1735.925 134.48000000000002 1742.03-27.369000000000028 1631.867-93.43700000000001 1519.496-160.82899999999995 1358.6-166.37199999999996 1246.767-98.09100000000001 1135.5-30.15599999999995 1164.257 148.603 1076.921 245.39100000000002 986.5319999999999 345.563 798.102 336.528 743.328 459.834 688.939 582.274 727.986 741.521 809.203 848.075 887.463 950.749 1033.4470000000001 961.671 1156.232 1001.5509999999999 1249.549 1031.8600000000001 1341.903 1054.868 1440 1052.958' fill='%23fbf6f2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1157'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+
+  width: 100%;
+  height: 80vh;
+  /* background-color: goldenrod; */
+  display: flex;
+  padding: 1rem 4rem;
+}
+#hero-section div {
+  width: 50%;
+}
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+}
+.hero-content p {
+  margin: 1.6rem 0rem;
+  font-size: large;
+}
+.hero-btns{
     display: flex;
-    align-itenavbar-mainms: center;
 }
-
-
-.searchbox input{
-    outline: none;
-    padding: .8rem 1rem;
-    min-width: 400px;
-    border-radius: 2rem;
-    background-color: rgb(221, 225, 226);
-    transition: all .3s ease;
+.hero-btns button {
+  padding: 0.7rem 2rem;
+  border: none;
+  background-color: var(--secondary-color);
+  color: white;
 }
-.searchbox input:hover{
-    transform: scale(1.05);
-    /* transform: rotate(180deg); */
+.hero-media img {
+  width: 500px;
+  height: 500px;
 }
-.user-profile{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.user-avatar{
-    padding: .5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 1rem;
-    transition:all .2s ease;
-
-}
-.user-avatar:hover{
-    background-color: rgba(250, 235, 215, 0.164);
-    color: black;
-    cursor: pointer;
-}
-.user-avatar img{
-    width: 50px;
-    height: 50px;
+.hero-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

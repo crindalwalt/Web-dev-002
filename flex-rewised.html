@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box; /* This retains orignal size of the element */
+      }
+      .container {
+        background-color: darkkhaki;
+        height: 100vh;
+
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-wrap: wrap-reverse;
+        flex-direction: column-reverse;
+
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: saddlebrown;
+        margin: 0.3rem;
+        color: white;
+        font-weight: bold;
+        padding: 1rem; /* size + padding */
+        border-radius: 0.2rem;
+      }
+      .d-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box:nth-child(odd) {
+        background-color: blueviolet;
+      }
+      .box:nth-child(even) {
+        background-color: red;
+      }
+      select{
+        padding: 1rem 2rem;
+        outline: none;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box d-center" id="box-1">BOX 1</div>
+      <div class="box d-center" id="box-2">BOX 2</div>
+      <div class="box d-center" id="box-3">BOX 3</div>
+      <div class="box d-center" id="box-4">BOX 4</div>
+      <div class="box d-center" id="box-5">BOX 5</div>
+      <!-- <span class="box">BOX</span> -->
+
+
+      <!-- <select name="" id="">
+        <option value="">Select your fav Car</option>
+        <option value="">Dodge Challenger</option>
+        <option value="">lexus 570</option>
+        <option value="">BMW M4</option>
+      </select> -->
+    </div>
+  </body>
+</html>
+<!-- Assignment: (for bazaid and salman)
+  figure out all the elements in the html whether they are block or inline
+
+-->
+
+
+
