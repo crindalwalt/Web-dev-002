@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid System in HMTL</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      .container{
+        display: grid;
+        /* grid columns */
+        grid-template-columns: repeat(3 ,1fr);
+        grid-template-rows:  auto;
+      }
+      .box {
+        background-color: darkorange;
+        padding: 1rem;
+        border-radius: .4rem;
+        margin: .5rem;
+
+        color: white;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      #box-1{
+        grid-column-start: 1;
+        grid-column-end: 4;
+      }
+
+      #box-2{
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+
+      #box-3{
+        grid-row-start: 2;
+        grid-row-end: 5;
+        grid-column-start: 3;
+        grid-column-end: 3 ;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box" id="box-1">Navbar</div>
+      <div class="box" id="box-2">Article</div>
+      <div class="box" id="box-3">BOX 3</div>
+      <div class="box" id="box-4">BOX 4</div>
+      <div class="box" id="box-5">BOX 5</div>
+      <div class="box" id="box-6">BOX 6</div>
+      <div class="box" id="box-7">BOX 7</div>
+      <div class="box" id="box-8">BOX 8</div>
+      <div class="box" id="box-9">BOX 9</div>
+      <div class="box" id="box-10">BOX 10</div>
+      <div class="box" id="box-11">BOX 11</div>
+      <div class="box" id="box-12">BOX 12</div>
+    </div>
+  </body>
+</html>
