@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation Revision</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .container {
+        width: 100%;
+        height: 100vh;
+        background-color: darkkhaki;
+        background-image: url("assets/school_background.jpg");
+        background-size: cover;
+
+        /* flexbox */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+      }
+      .box {
+        --box-side: 150px;
+        width: var(--box-side);
+        height: var(--box-side);
+        background-color: red;
+        backdrop-filter: blur(50px);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: bold;
+        font-size: xx-large;
+        transition: all .2s ease;
+        /* animation */
+        animation-name: ghoom;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+        animation-play-state: running;
+        animation-timing-function: ease;
+        animation-delay: 2s;
+        
+
+      }
+      .box:hover{
+        transform: skew(5deg);
+      }
+      @keyframes ghoom {
+        /* from and to method */
+        /* from {
+            background-color: red;
+        }
+        to{
+            background-color: black;
+
+        } */
+        /* percentage method */
+        0%{
+            background-color: red;
+            transform: rotate(0deg);
+        }
+
+
+        20%{
+            background-color: teal;
+            transform:  rotate(45deg);
+        }
+        40%{
+            background-color: green;
+            transform: rotate(90deg);
+        }
+        60%{
+            background-color: darkblue;
+            transform:  rotate(180deg);
+            /* color: black; */
+        }
+        80%{
+            background-color: purple;
+            transform:  rotate(270deg);
+            /* color: black; */
+        }
+        100%{
+            background-color: darkkhaki;
+            transform:  rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box"><svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41m-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9"/>
+        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5 5 0 0 0 8 3M3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9z"/>
+      </svg></div>
+    </div>
+  </body>
+</html>
