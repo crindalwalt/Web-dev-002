@@ -101,3 +101,57 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
   justify-content: center;
   align-items: center;
 }
+
+/* ============================================ CATEGORY SECTION  */
+
+#category-section{
+
+}
+.category-inner{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem 2rem ;
+  background-color: gray;
+  /* overflow: hidden;
+  scroll-snap-type: x mandatory;
+  width: auto; */
+}
+
+.category-card{
+  width: 150px;
+  height: auto;
+  /* background-color: blueviolet; */
+  padding: 1rem;
+  color: #333333;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  margin: 1rem;
+
+  
+
+}
+.category-card img{
+  width: calc(150px - 20%);
+  border-radius: 50%;
+  border: 3px solid transparent;
+  transition: all .3s ease;
+
+  aspect-ratio: 1/1;
+}
+
+.category-card h3{
+  font-size: 1.7rem;
+  margin-top: .8rem;
+  border-bottom: 3px solid transparent;
+}
+
+.category-card img:hover{
+  border: 3px solid darkslategray;
+  cursor: pointer;
+}
+
+.category-card h3:hover{
+  border-bottom: 3px solid #333333;
+}
