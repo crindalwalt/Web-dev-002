@@ -81,4 +81,20 @@ function getDrivingLicense (nombre,age){
 
  */
 
-let operationType = parseInt(prompt("******* Pick an Opertation *****\n1) Addition\n2) Multiplication\n3) Subtraction\n4) Division\n Type your choice in 1-4"));
+// let operationType = parseInt(prompt("******* Pick an Opertation *****\n1) Addition\n2) Multiplication\n3) Subtraction\n4) Division\n Type your choice in 1-4"));
+
+
+
+function myFunction (){
+  console.log("Hello from the Common JS function")
+}
+// 2016 ECMA script introducted arrow function 
+
+
+let myArrowFunction = (name, age)=>{
+  console.log("Hello from the Arrow function ");
+  console.log(`${name} is the name and the age is ${age}`)
+}
+
+
+myArrowFunction();
