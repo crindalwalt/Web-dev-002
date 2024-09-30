@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Clock</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #333333;
+
+      }
+      .time {
+        width: 300px;
+        height: 100px;
+        background-color: darkkhaki;
+        border-radius: 0.3rem;
+        padding: 1rem;
+
+        background-image: url("assets/image.png");
+        background-size: cover;
+      }
+      .time-h-m{
+        font-size: 3rem;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="time">
+
+      </div>
+    </div>
+  </body>
+  <script>
+    let getTime = () => {
+      // acquiring details from DateTime object
+      let dateTime = new Date();
+      let hours = dateTime.getHours();
+      let minutes = dateTime.getMinutes();
+      let seconds = dateTime.getSeconds();
+      let miliseconds = dateTime.getMilliseconds();
+      let dayArray = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+      let day = dayArray[dateTime.getDay()];
+      let date = dateTime.getDate();
+      let year = dateTime.getFullYear();
+      let monthArray = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+      ];
+      let month = monthArray[dateTime.getMonth()];
+
+      // formatizing the dateTime
+      let ronaldo = `<div class="time-h-m">${hours}:${minutes} <small>${seconds}</small></div>
+        <div class="date"> ${day} ${date} ${month} ${year}</div>`;
+
+
+      // grabbing the DOM element
+      let TimeBox = document.querySelector(".time");
+      TimeBox.innerHTML = ronaldo;
+
+    };
+
+
+    setInterval(getTime, 1000);
+  </script>
+</html>
