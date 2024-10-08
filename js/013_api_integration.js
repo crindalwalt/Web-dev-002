@@ -8,28 +8,41 @@ const method = "GET";
 // XTTP
 
 let xhr = new XMLHttpRequest();
+/**
+ *
+ *
+ *
+ */
 
 xhr.open(method, url);
-xhr.onprogress = ()=>{
+xhr.onprogress = () => {
   console.log("loading...");
-}
+};
 xhr.onload = () => {
-console.log(xhr.responseText);
-let response = JSON.parse(xhr.responseText);
-console.log(response);
+  let response = JSON.parse(xhr.responseText);
+  console.log(response);
+  let resArray = response.articles;
+
+  let cardHolder = document.querySelector("#cardsHolder");
+
+  let index = 0;
+  while (index < resArray.length) {
+    let element = resArray[index];
+    let cardString = `
+      <div class="card m-2" style="width: 18rem">
+            <img src="${element.urlToImage}" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">${element.title}</h5>
+              <p class="card-text">
+                ${element.description}
+              </p>
+              <a href="${element.url}" class="btn btn-primary">Read More</a>
+            </div>
+          </div>`;
+    cardHolder.innerHTML += cardString;
+    index++;
+  }
 };
 
 xhr.send();
-
-// let obj = {
-//   name : "SHahzad",
-//   age : 12,
-// }
-
-// let obj = {
-//   "name" : "Shahzad",
-//   "age" : 234.
-// }
-
-// json => obj (JSON.parse())
-// obj => json (JSON.stringify());
+u
