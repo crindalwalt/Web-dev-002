@@ -8,11 +8,6 @@ const method = "GET";
 // XTTP
 
 let xhr = new XMLHttpRequest();
-/**
- *
- *
- *
- */
 
 xhr.open(method, url);
 xhr.onprogress = () => {
@@ -45,4 +40,3 @@ xhr.onload = () => {
 };
 
 xhr.send();
-u

@@ -52,6 +52,7 @@
             </div>
         </div>
     </nav>
+    <!-- Form starts -->
     <div class="bg-secondary p-4 container my-5 w-50 rounded-3">
         <div class="mb-3">
             <label for="note" class="form-label">Note</label>
@@ -72,7 +73,9 @@
         <div class="mb-3">
            <button id="submitNote" class="btn btn-lg btn-success px-4">Add a note</button>
         </div>
+       
     </div>
+     <!-- Form Ends -->
 
     <div class="bg-secondary p-4 container my-5  rounded-3">
         <table class="table table-striped">
@@ -84,18 +87,8 @@
                 <th scope="col">Action</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>
-                    <div class="d-flex">
-                        <button class="btn btn-sm btn-outline-primary m-2">Edit</button>
-                        <button class="btn btn-sm btn-outline-danger m-2">Delete</button>
-                    </div>
-                </td>
-              </tr>
+            <tbody id="notesHolder">
+              
              
              
             </tbody>
