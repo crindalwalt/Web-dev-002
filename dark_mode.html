@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dark Mode</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            background-color: gainsboro;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #afd6e7;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #darkModeButton {
+            padding: 1rem 2rem;
+            border-radius: 1rem;
+            background-color: #978a8a;
+
+        }
+        .dark{
+            background-color: #333333 !important;
+            color: white !important;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="box">
+        <button id="darkModeButton">Dark Mode</button>
+    </div>
+</div>
+</body>
+
+
+<script>
+
+
+    let getDarkMode = (e) => {
+        // console.log("darkModeButton clicked");
+        let container = document.querySelector(".container");
+        container.style.backgroundColor = "black";
+
+
+        let box = document.querySelector(".box");
+        box.style.backgroundColor = "purple";
+
+        e.target.style.backgroundColor = "red";
+        e.target.style.color = "white";
+
+
+    }
+    let darkModeButton = document.querySelector('#darkModeButton');
+    darkModeButton.addEventListener("click", getDarkMode);
+
+</script>
+</html>
