@@ -32,13 +32,27 @@ console.log(!(result > 34 || result < 170));
 let isMarried = false;
 console.log(!isMarried)
 
+let generateRandomNumber = ()=>{
+    let randomNumber =Math.ceil(Math.random() * 100);
+    console.log(randomNumber)
+    localStorage.setItem("number",randomNumber);
 
-let randomNumber =Math.ceil(Math.random() * 100000);
-console.log(randomNumber);
+}
+let number = localStorage.getItem("number");
+console.log(number)
 let userInput = parseInt(prompt("Guess the number"));
-if(userInput > randomNumber){
+if(userInput >  number){
     alert("lower");
 }else{
     alert("higher")
 }
-console.log(randomNumber);
+
+
+
+
+
+
+
+let numberBtn = document.querySelector("#num");
+numberBtn.addEventListener("click",generateRandomNumber)
+// console.log(numberBtn);
