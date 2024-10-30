@@ -13,10 +13,13 @@
         .bg-gray{
             background-color: gray;
         }
+        body{
+
+            background-color: #333;
+        }
         .container{
             width: 100%;
             /* height: 100vh; */
-            background-color: #333;
             padding: 1rem;
             display: flex;
             flex-direction: column;
@@ -44,7 +47,6 @@
             accent-color: red;
         }
         .heading{
-            color: white;
             text-align: start;
             font-family: sans-serif;
             margin: 2rem 0rem;
@@ -53,14 +55,51 @@
             transform: scale(0.95);
             background-color: gainsboro;
         }
+        .colorButton{
+            padding: .6rem 1.2rem;
+            border: 2px solid purple;
+            border-radius: .5rem;
+        }
+        .nav{
+            width: 100%;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+        }
+        .inner-nav{
+            display: flex;
+        }
+        .colorThemeBox{
+
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            margin: .5rem;
+            cursor: pointer;
+            background-color: black;
+        }
+        #theme1{
+
+            background-color: #52796f;
+        }
     </style>
 </head>
 <body>
+    <div class="nav">
+        <div class="inner-nav">
+            <div class="colorThemeBox" id="theme1"></div>
+            <div class="colorThemeBox"></div>
+            <div class="colorThemeBox"></div>
+            <div class="colorThemeBox"></div>
+        </div>
+    </div>
     <div class="container">
         <h1 class="heading">Your Todo's</h1>
-        <div>
-            <input type="color">
-        </div>
+        <!-- <div>
+            <input type="color" id="colorPicker" value="#83a0bf">
+            <button class="colorButton">Change Color</button>
+        </div> -->
         <div class="todo-item">
             <input type="checkbox">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, voluptates!</p>
@@ -143,25 +182,7 @@
 <!-- <script src="02_functions.js"></script> -->
 <!-- <script src="03_DOM.js"></script> -->
 <!-- <script src="04_loops.js"></script> -->
- <script>
-    let todoItems = document.querySelectorAll(".todo-item");
-// console.log(todoItems) ✅
-
-for(let index = 0;index < todoItems.length;index++){
-    let element  = todoItems[index];
-    // console.log(element) ✅
-
-    element.addEventListener("click",()=>{
-        // console.log("element is clicked"); ✅
-        element.style.backgroundColor = "salmon";
-        element.style.border = "2px solid white";
-
-        console.log(element.children)
-        element.children[1].style.textDecoration = "line-through"
-        element.children[0].checked = true;
-    })
-
-}
+ <script src="05_darkMode.js">
 
  </script>
 </body>
