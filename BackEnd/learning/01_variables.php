@@ -110,7 +110,7 @@ $cousines = array(
 );
 
 $isMarried = false; // boolean
-echo var_dump($isMarried);
+echo var_dump(value: $isMarried);
 
 $myInfo = [
     "name" => "Shahzad",

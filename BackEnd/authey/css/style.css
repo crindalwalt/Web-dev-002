@@ -1,0 +1,16 @@
+:root{
+    --primary-color : #dadada;
+    --button-color: #ff5400;
+}
+
+.bg-main{
+    background-color: var(--primary-color);
+}
+.btn-main{
+    background-color: var(--button-color);
+    color: white
+}
+.btn-main:hover{
+    background-color: red;
+    color: white
+}
