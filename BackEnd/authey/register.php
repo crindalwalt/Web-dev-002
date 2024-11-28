@@ -1,6 +1,7 @@
 <?php
 $password_mismatched = $_GET['passmatch'];
 $wrong_method = $_GET['method'];
+$empty_fields = $_GET['emptyFields'];
 
 
 ?>
@@ -30,6 +31,16 @@ $wrong_method = $_GET['method'];
         echo '<div class="container">
         <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert" >
             <strong>Warning</strong> Password does not Matched, try again
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>';
+    }
+
+    if ($empty_fields == "true") {
+        echo '<div class="container">
+        <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert" >
+            <strong>Warning</strong> 
+            Input Fields are required.
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     </div>';
