@@ -1,5 +1,6 @@
 <?php
 $account_success = $_GET['acc'];
+$account_exist = $_GET['accexist'];
 
 ?>
 
@@ -31,6 +32,16 @@ $account_success = $_GET['acc'];
             </div>';
     }
 
+    if ($account_exist == "no") {
+        echo '<div class="container">
+                <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert" >
+                    <strong>Warning</strong> 
+                    No Account is associated with this email. please create an account
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </div>';
+    }
+
     ?>
     <!-- main Container -->
     <div class="container d-flex justify-content-between align-items-center p-4">
@@ -40,19 +51,20 @@ $account_success = $_GET['acc'];
         </div>
         <div class="forms bg-main p-3 rounded-3 w-50">
 
-            <div class="my-4">
-                <label for="email">Enter your Email</label>
-                <input type="email" placeholder="e.g John@somemail.com" class="form-control my-2" id="email">
-            </div>
-            <div class="my-4">
-                <label for="pass1">Enter your Password</label>
-                <input type="password" placeholder="*********" class="form-control my-2" id="pass1">
-            </div>
+            <form action="backend/login_handler.php" method="POST" >
+                <div class="my-4">
+                    <label for="email">Enter your Email</label>
+                    <input type="email" placeholder="e.g John@somemail.com" class="form-control my-2" id="email" name="email">
+                </div>
+                <div class="my-4">
+                    <label for="pass1">Enter your Password</label>
+                    <input type="password" placeholder="*********" class="form-control my-2" id="pass1" name="pass">
+                </div>
 
-            <div class="my-4">
-
-                <input type="submit" class="btn btn-main btn-md my-2" value="Login ">
-            </div>
+                <div class="my-4">
+                    <input type="submit" class="btn btn-main btn-md my-2" value="Login ">
+                </div>
+            </form>
         </div>
     </div>
 
