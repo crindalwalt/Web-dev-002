@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         // check whether result row arrived or not✅
         $num_rows = mysqli_num_rows($query_run);
         if($num_rows < 1){
-            echo "account does not exist, please register";
+            echo "account does not exist, please register ";
             header("location:../login.php?accexist=no");
             exit();
         }
@@ -32,8 +32,15 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             echo "Incorrect!, email or password";
             exit();
         }
-        echo "password matched";
-        // advance....
+        
+        // start session for login user ✅
+        session_start();
+        $_SESSION['login'] = true;
+        $_SESSION['username'] = $row_data['name'];
+        $_SESSION['useremail'] = $row_data['email'];
+
+        header("location:../index.php?login=true");
+        
 
 
 

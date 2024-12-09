@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <nav class="navbar navbar-expand-lg bg-main navbar-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Authey</a>
@@ -9,13 +15,35 @@
 
 
                 <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Not Logged In</a>
+                    <a class="nav-link disabled" aria-disabled="true">
+
+                        <?php
+                        if (
+                            isset($_SESSION['login']) &&
+                            isset($_SESSION['username'])
+                        ) {
+                            echo $_SESSION['username'];
+                        } else {
+                            echo "not logged in";
+                        }
+
+                        ?>
+                    </a>
                 </li>
             </ul>
             <form class="d-flex" role="search">
 
-                <a class="btn btn-main mx-2" href="register.php">Register</a>
-                <a class="btn btn-main mx-2" href="login.php">Login</a>
+                <?php
+                if (isset($_SESSION['login']) && $_SESSION['login'] == true) {
+                    echo '<a class="btn btn-main mx-2" href="backend/logout_handler.php">Logout</a>';
+                } else {
+                    echo '<a class="btn btn-main mx-2" href="register.php">Register</a>
+                <a class="btn btn-main mx-2" href="login.php">Login</a>';
+                }
+
+                ?>
+
+
             </form>
         </div>
     </div>

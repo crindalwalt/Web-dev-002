@@ -1,6 +1,7 @@
 <?php
 $account_success = $_GET['acc'];
 $account_exist = $_GET['accexist'];
+$account_logout = $_GET['logout'];
 
 ?>
 
@@ -19,7 +20,9 @@ $account_exist = $_GET['accexist'];
 </head>
 
 <body>
-    <?php include "./partials/_navbar.php"; ?>
+    <?php 
+    include "./partials/_navbar.php";
+     ?>
     <?php
 
     if ($account_success == "true") {
@@ -32,11 +35,21 @@ $account_exist = $_GET['accexist'];
             </div>';
     }
 
+    if ($account_logout == "true") {
+        echo '<div class="container">
+                <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert" >
+                    <strong>Logout</strong> 
+                    Your account has been logout.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </div>';
+    }
+
     if ($account_exist == "no") {
         echo '<div class="container">
                 <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert" >
                     <strong>Warning</strong> 
-                    No Account is associated with this email. please create an account
+                    No Account is associated with this email 😡. please create an account
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
             </div>';
