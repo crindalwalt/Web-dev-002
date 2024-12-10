@@ -1,3 +1,18 @@
+<?php
+
+session_start();
+if (
+    !isset($_SESSION['login']) &&
+    $_SESSION['login'] != true
+) {
+    echo "you are not logedin";
+    header("location: login.php?login=false");
+    exit();
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +30,7 @@
 <body>
     <?php
     include "./partials/_navbar.php";
-    
+
     ?>
     <!-- main Container -->
     <div class="container d-flex flex-column justify-content-between align-items-center p-4">

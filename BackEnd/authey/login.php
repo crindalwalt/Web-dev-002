@@ -2,6 +2,7 @@
 $account_success = $_GET['acc'];
 $account_exist = $_GET['accexist'];
 $account_logout = $_GET['logout'];
+$account_login = $_GET['login'];
 
 ?>
 
@@ -20,9 +21,9 @@ $account_logout = $_GET['logout'];
 </head>
 
 <body>
-    <?php 
+    <?php
     include "./partials/_navbar.php";
-     ?>
+    ?>
     <?php
 
     if ($account_success == "true") {
@@ -30,6 +31,16 @@ $account_logout = $_GET['logout'];
                 <div class="alert alert-success alert-dismissible fade show mt-3" role="alert" >
                     <strong>Success</strong> 
                     Your account has been created. please login here
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </div>';
+    }
+
+    if ($account_login == "false") {
+        echo '<div class="container">
+                <div class="alert alert-secondary alert-dismissible fade show mt-3" role="alert" >
+                    <strong>Error</strong> 
+                    You are not logged in . Login first
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
             </div>';
@@ -64,7 +75,7 @@ $account_logout = $_GET['logout'];
         </div>
         <div class="forms bg-main p-3 rounded-3 w-50">
 
-            <form action="backend/login_handler.php" method="POST" >
+            <form action="backend/login_handler.php" method="POST">
                 <div class="my-4">
                     <label for="email">Enter your Email</label>
                     <input type="email" placeholder="e.g John@somemail.com" class="form-control my-2" id="email" name="email">

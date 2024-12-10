@@ -11,6 +11,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $email_address = $_POST["email"];
     $password  = $_POST['pass'];
     $confirm_password  = $_POST['pass2'];
+    $hash = password_hash($password,PASSWORD_DEFAULT);
+    
     
 
 
@@ -30,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         if ($password == $confirm_password) {
             require "database_handler.php";
             // save record to database
-            $insertionQuery = "INSERT INTO `users` ( `name`, `email`, `password`) VALUES ( '$full_name', '$email_address', '$password');";
+            $insertionQuery = "INSERT INTO `users` ( `name`, `email`, `password`) VALUES ( '$full_name', '$email_address', '$hash');";
             $insertionQueryRun = mysqli_query($connection, $insertionQuery);
             header("location:../login.php?acc=true");
         } else {

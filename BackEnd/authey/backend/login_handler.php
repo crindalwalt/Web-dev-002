@@ -28,7 +28,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         // check form password and database password✅
         $row_data = mysqli_fetch_assoc($query_run);
         $db_pass = $row_data["password"];
-        if($pass != $db_pass){
+        $decrypt = password_verify($pass,$db_pass);
+        if(!$decrypt){
             echo "Incorrect!, email or password";
             exit();
         }
