@@ -37,6 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         // start session for login user ✅
         session_start();
         $_SESSION['login'] = true;
+        $_SESSION['user_id'] = $row_data['id'];
         $_SESSION['username'] = $row_data['name'];
         $_SESSION['useremail'] = $row_data['email'];
 

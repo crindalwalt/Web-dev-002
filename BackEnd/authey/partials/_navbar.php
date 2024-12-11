@@ -6,7 +6,7 @@ session_start();
 
 <nav class="navbar navbar-expand-lg bg-main navbar-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Authey</a>
+        <a class="navbar-brand" href="http://localhost:3000/">Authey</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
